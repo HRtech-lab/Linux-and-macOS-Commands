@@ -1,6 +1,6 @@
 # Portable shell labs
 
-Run each example in an empty temporary directory. The companion Python script creates one for each installed shell, captures the real exit status and output, and compares the results with known fixture values. The recorded examples ran with sh, Bash and zsh on Linux. A separate [hosted verification](https://github.com/HRtech-lab/HRtech-lab-Shell_Commands_for_Computational_biology_Bioinformatics/actions/runs/45726914354) ran all eight fixtures on Linux and macOS, including the BSD stat branch on macOS.
+Run each example in an empty temporary directory. The companion Python script creates one for each installed shell, captures the real exit status and output, and compares the results with known fixture values. The recorded examples ran with sh, Bash and zsh on Linux. A separate [hosted verification](https://github.com/HRtech-lab/Linux-and-macOS-Commands/actions/runs/45726914354) ran all eight fixtures on Linux and macOS, including the BSD stat branch on macOS.
 
 ## Worked lectures
 

@@ -18,6 +18,6 @@ A shell parses quotes, expands names and starts programs. The executable chosen 
 
 ## Running the examples
 
-Use Python 3 with Matplotlib, NumPy and Jupyter. In any lab, run `python lesson.py` or open the notebook. To run a shell listing directly, copy it into an empty temporary directory and run `sh example.sh` there. Several examples create, change or remove their own named fixture files. The notebook outputs were recorded on Linux. All eight scripts also passed the [Linux and macOS checks](https://github.com/HRtech-lab/HRtech-lab-Shell_Commands_for_Computational_biology_Bioinformatics/actions/runs/45726914354). The macOS catalogue links the platform manuals for its native utilities.
+Use Python 3 with Matplotlib, NumPy and Jupyter. In any lab, run `python lesson.py` or open the notebook. To run a shell listing directly, copy it into an empty temporary directory and run `sh example.sh` there. Several examples create, change or remove their own named fixture files. The notebook outputs were recorded on Linux. All eight scripts also passed the [Linux and macOS checks](https://github.com/HRtech-lab/Linux-and-macOS-Commands/actions/runs/45726914354). The macOS catalogue links the platform manuals for its native utilities.
 
 [POSIX utility index](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/contents.html) · [GNU Coreutils](https://www.gnu.org/software/coreutils/manual/coreutils.html) · [Apple Terminal guide](https://support.apple.com/guide/terminal/welcome-trml2df0220c/mac) · [MIT licence](../LICENSE)
