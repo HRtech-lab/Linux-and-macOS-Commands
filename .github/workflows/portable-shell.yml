@@ -1,0 +1,20 @@
+name: Portable shell examples
+on:
+  push:
+    paths:
+      - 'Linux and macOS Commands/Portable shell labs/**'
+      - '.github/workflows/portable-shell.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fixture-checks:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - name: Check portable commands on the host
+        run: python3 "Linux and macOS Commands/Portable shell labs/check_platform.py"
