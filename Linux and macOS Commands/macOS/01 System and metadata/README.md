@@ -17,7 +17,7 @@ Examples name small local fixture files. Use the installed manual for flags, ava
 | `pmset` | `pmset -g batt` | Read the battery and power-source summary. |
 | `ioreg` | `ioreg -l -c AppleSmartBattery` | Inspect available local battery registry properties. |
 | `vm_stat` | `vm_stat` | Show virtual-memory page statistics. |
-| `memory_pressure` | `memory_pressure -Q` | Query the current pressure level without generating load. |
+| `csrutil` | `csrutil status` | Read the local System Integrity Protection status. |
 | `tmutil` | `tmutil status` | Show the current Time Machine activity. |
 | `launchctl` | `launchctl print-disabled system` | Read disabled launch-service overrides. |
 | `softwareupdate` | `softwareupdate --history` | Review the history of installed software updates. |
