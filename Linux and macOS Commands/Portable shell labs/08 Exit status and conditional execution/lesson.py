@@ -1,0 +1,46 @@
+"""Exit status and conditional execution
+
+Observe matching, nonmatching and missing input through grep exit codes.
+
+The Open Group, POSIX shell command language
+https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html
+GNU Bash reference manual
+https://www.gnu.org/software/bash/manual/bash.html
+Apple Terminal User Guide
+https://support.apple.com/guide/terminal/welcome-trml2df0220c/mac"""
+
+from pathlib import Path
+import shutil, subprocess, tempfile
+import matplotlib.pyplot as plt
+import numpy as np
+
+here = Path(__file__).resolve().parent
+
+
+def main():
+    expected = [0, 1, 2]
+    shells = [name for name in ("sh", "bash", "zsh") if shutil.which(name)]
+    runs = {}
+    for shell in shells:
+        with tempfile.TemporaryDirectory() as directory:
+            result = subprocess.run(
+                [shell, str(here / "example.sh")],
+                cwd=directory,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+        numbers = [int(v) for v in result.stdout.split()]
+        runs[shell] = numbers
+        print(shell, numbers)
+        assert numbers[:2] == [0, 1] and numbers[2] > 1
+    observed = runs[shells[0]]
+
+    fig, ax = plt.subplots(figsize=(5.8, 2.9), constrained_layout=True)
+    ax.bar(["match", "no match", "missing file"], observed, color="#357a80")
+    ax.set(ylabel="Exit status")
+    plt.show()
+
+
+if __name__ == "__main__":
+    main()
